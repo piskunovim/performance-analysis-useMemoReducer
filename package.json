@@ -1,0 +1,33 @@
+{
+  "name": "use-memo-reducer-benchmark",
+  "version": "0.7.0",
+  "description": "Benchmarks to test performance of useMemoReducer hook",
+  "main": "index.js",
+  "scripts": {
+    "build:complexState": "babel ./tests/complexState.jsx --out-file ./dist/complexState.js",
+    "build:simpleCounter": "babel ./tests/simpleCounter.jsx --out-file ./dist/simpleCounter.js",
+    "build:listRendering": "babel ./tests/listRendering.jsx --out-file ./dist/listRendering.js",
+    "build": "npm run build:complexState && npm run build:simpleCounter && npm run build:listRendering",
+    "start:complexState": "node ./dist/complexState.js",
+    "start:simpleCounter": "node ./dist/simpleCounter.js",
+    "start:listRendering": "node ./dist/listRendering.js",
+    "start": "npm run start:simpleCounter && npm run start:listRendering && npm run start:complexState"
+  },
+  "author": "Igor Piskunov",
+  "license": "MIT",
+  "dependencies": {
+    "@testing-library/react": "^14.0.0",
+    "benchmark": "^2.1.4",
+    "jsdom": "^22.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.1.1",
+    "redux": "^4.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.5",
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "@babel/preset-react": "^7.22.5"
+  }
+}
